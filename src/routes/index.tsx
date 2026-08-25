@@ -248,8 +248,8 @@ function Index() {
 
             <h1 className="font-display text-[clamp(2.6rem,7vw,4.6rem)] leading-[0.95]">
               <WordsReveal text="Emagrecimento" className="block" />
-              <span className="block text-gradient-warm italic">
-                <WordsReveal text="além da estética." />
+              <span className="block italic">
+                <WordsReveal text="além da estética." wordClassName="text-gradient-warm" />
               </span>
             </h1>
 

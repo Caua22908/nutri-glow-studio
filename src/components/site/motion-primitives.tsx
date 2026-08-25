@@ -62,14 +62,22 @@ export function ScrollProgressBar() {
   );
 }
 
-export function WordsReveal({ text, className }: { text: string; className?: string }) {
+export function WordsReveal({
+  text,
+  className,
+  wordClassName,
+}: {
+  text: string;
+  className?: string;
+  wordClassName?: string;
+}) {
   const words = text.split(" ");
   return (
     <span className={className}>
       {words.map((word, i) => (
         <motion.span
           key={`${word}-${i}`}
-          className="inline-block will-change-transform"
+          className={`inline-block will-change-transform ${wordClassName ?? ""}`}
           initial={{ opacity: 0, y: "0.5em", rotateX: -45 }}
           animate={{ opacity: 1, y: 0, rotateX: 0 }}
           transition={{ duration: 0.85, delay: 0.15 + i * 0.07, ease: [0.16, 1, 0.3, 1] }}
